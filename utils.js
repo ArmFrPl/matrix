@@ -18,7 +18,15 @@ function multiplyMatrices(mat1, mat2){
         }
       }
     }
-    return res;
+    let result = "";
+
+    for(let i = 0; i < res.length; i++) {
+      for(let j = 0; j < res.length; j++) {
+        result += res[i][j] + '\t';
+      }
+      result += "\n";
+    }
+    return result;
   }else{
     return 'Numbers doesn\'t much';
   }
