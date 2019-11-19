@@ -5,15 +5,12 @@ function multiplyMatrices(mat1, mat2){
     arr2.push(mat2[i][0]);
   }
   if(arr1.length === arr2.length){
-    let mat1Rows = mat1.length;
-    let mat1Cols = mat1[0].length;
-    let mat2Cols = mat2[0].length;
-    let res = new Array(mat1Rows);
-    for (let k = 0; k < mat1Rows; k++) {
-      res[k] = new Array(mat2Cols); // initialize the current row
-      for (let c = 0; c < mat2Cols; c++) {
+    let res = new Array(mat1.length);
+    for (let k = 0; k < mat1.length; k++) {
+      res[k] = new Array(mat2[0].length); // initialize the current row
+      for (let c = 0; c < mat2[0].length; c++) {
         res[k][c] = 0;             // initialize the current cell
-        for (let i = 0; i < mat1Cols; i++) {
+        for (let i = 0; i < mat1[0].length; i++) {
           res[k][c] += mat1[k][i] * mat2[i][c];
         }
       }
