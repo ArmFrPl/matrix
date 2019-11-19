@@ -1,16 +1,20 @@
 function print(mat) {
 
-  let result = "";
+  if(mat){
+    let result = "";
 
-  for (let i = 0; i < mat.length; i++) {
-    for (let j = 0; j < mat.length; j++) {
-      result += mat[i][j] + '\t';
+    for (let i = 0; i < mat.length; i++) {
+      for (let j = 0; j < mat.length; j++) {
+        result += mat[i][j] + '\t';
+      }
+      result += "\n";
     }
-    result += "\n";
+    return result;
   }
-  return result;
+  return null;
+
 }
 
 module.exports = {
   print
-}
+};
