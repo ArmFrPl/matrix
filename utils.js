@@ -15,20 +15,30 @@ function multiplyMatrices(mat1, mat2){
         }
       }
     }
-    let result = "";
-
-    for(let i = 0; i < res.length; i++) {
-      for(let j = 0; j < res.length; j++) {
-        result += res[i][j] + '\t';
-      }
-      result += "\n";
-    }
-    return result;
+    return res;
   }else{
     return 'Numbers doesn\'t much';
   }
 }
 
+function print(mat) {
+
+  if(mat){
+    let result = "";
+
+    for (let i = 0; i < mat.length; i++) {
+      for (let j = 0; j < mat.length; j++) {
+        result += mat[i][j] + '\t';
+      }
+      result += "\n";
+    }
+    return result;
+  }
+  return null;
+
+}
+
 module.exports = {
-  multiplyMatrices
+  multiplyMatrices,
+  print
 };
